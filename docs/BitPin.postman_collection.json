@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "05ee14a4-64cf-4609-9c0e-9c0c20d96823",
+		"name": "BitPin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10697884"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/token/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/posts/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk3NjU0MTQ0LCJpYXQiOjE2OTc2NTM4NDQsImp0aSI6IjNlZTgxMmJiOGRlOTQ1OGRhOWRhNzMxY2VjNDk3MGExIiwidXNlcl9pZCI6MX0.6_NvyRLQbMNzAd43KCPKBui_eh9JYiFz1vdky7SHiQI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/reviews/create/3/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk3NjU0MTQ0LCJpYXQiOjE2OTc2NTM4NDQsImp0aSI6IjNlZTgxMmJiOGRlOTQ1OGRhOWRhNzMxY2VjNDk3MGExIiwidXNlcl9pZCI6MX0.6_NvyRLQbMNzAd43KCPKBui_eh9JYiFz1vdky7SHiQI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/reviews/create/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"create",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
